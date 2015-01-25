@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <div class="form-inline">
+  <div class="panel-heading">
+</div>
+<div class="pannel-body">
+<%= form_for Booking.new do |t| %>
+<%= render 'shared/error_messages', object: t.object %>
+<div class="form-group" style="margin-left: 10px; margin-bottom: 30px">
+  <%= t.label :start %><br>
+  <%= t.time_select :start %>
+</div>
+<div class="form-group" style="margin-left: 20px; margin-bottom: 30px">
+  <%= t.label :end %><br>
+  <%= t.time_select :end %>
+</div>
+<div class="form-group" style="margin-left: 20px">
+  <%= t.label :comentariu %><br>
+  <%= t.text_area :comentariu, placeholder: "Adauga un comentariu.."  %>
+</div>
+<div class="form-group" style="margin-left: 40px; margin-top: 10px">
+<%= t.submit "Post", class: "btn btn-primary" %>
+</div>
+<% end %>
+</div>
+</div>

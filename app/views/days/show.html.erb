@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @day.day %>
+<tr>
+<td>
+| <%= link_to 'Back', days_path %>
+</td>
+<td>
+</p>
+<div class="row">
+  <aside class="col-md-4">
+
+    <section class="booking_form">
+      <%= render 'shared/booking_form' %>
+    </section>
+  </aside>
+</div>
+
+
+<div class="col-md-8">
+  <% if @day.bookings.any? %>
+  <h3>Programari (<%= @day.bookings.count %>)</h3>
+  <ol class="bookings">
+    <%= render @bookings %>
+  </ol>
+  <%= will_paginate @bookings %>
+  <% end %>
+</div>
+</td>
+</tr>

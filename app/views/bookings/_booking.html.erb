@@ -1,0 +1,18 @@
+<table>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+<td class="list_qctions">
+    <li id="booking-<%= booking.id %>">
+<span class="start"><%= booking.start.strftime('%H:%M') %></span></td>
+<td><span class="end"><%= booking.end.strftime('%H:%M') %></span></td>
+<td class="list_description"
+<span class="start"><%= booking.comentariu %></span>
+</td>
+<span class="timestamp">
+</span>
+</li>
+</tr>
+</table>
+
+<!--<td>
+  <span class="day"><%= link_to booking.day.day, booking.day %></span>
+</td>-->
